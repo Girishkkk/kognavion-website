@@ -11,8 +11,7 @@ export const useCourses = () => {
         setLoading(true);
         
         // Fetch the pre-processed JSON file (converted from Excel during build)
-        // Use the correct base path for GitHub Pages
-        const response = await fetch('/kognavion-website/courses.json');
+        const response = await fetch('/courses.json');
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
